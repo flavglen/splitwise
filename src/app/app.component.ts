@@ -1,6 +1,9 @@
-declare var require: any;
+declare function require(name: string);
 
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
+
+var AuthApi = require('splitwise-node');
 
 
 @Component({
@@ -10,15 +13,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'splitwise';
+  autUrl = '';
+  constructor(private auth: AuthService) {
 
-  constructor() {
+    // let userOAuthToken, userOAuthTokenSecret;
+    // let authApi = new AuthApi('nuB8amtMzpnltAB0Py0oFDM4Q8kaLYUnjJGBGG49', 'dLHH1fW0kia2bueofjQYkJZhamuVXJxsNiDNeXQg');
+    // let userAuthUrl = authApi.getOAuthRequestToken()
+    //     .then(({ token, secret }) => {
+    //         [userOAuthToken, userOAuthTokenSecret] = [token, secret];
+    //         return authApi.getUserAuthorisationUrl(token);
+    //     });
 
-    // set config
-    // const sws = sw({
-    //   consumerKey: 'your key here',
-    //   consumerSecret: 'your secret here'
-    // });
 
-    // console.log(sws);
+
+
+
+
+
+
   }
 }

@@ -5,7 +5,6 @@ import * as path from "path";
 
 // Sample router
 import { userRouter } from "./routes/user";
-
 const app: express.Application = express();
 
 app.disable("x-powered-by");
