@@ -11,6 +11,7 @@ import { AddExpenseComponent } from './add-expense/add-expense.component';
 import { ViewExpenseComponent } from './view-expense/view-expense.component';
 import {TableModule} from 'primeng/table';
 import {FormsModule} from '@angular/forms';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {FormsModule} from '@angular/forms';
     HttpClientModule,
     BrowserAnimationsModule,
     TableModule,
-    FormsModule
+    FormsModule,
+    CardModule
 
   ],
   providers: [

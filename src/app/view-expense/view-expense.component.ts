@@ -11,8 +11,10 @@ export class ViewExpenseComponent implements OnInit  {
   constructor(private auth: AuthService) { }
 
   ngOnInit() {
-      this.auth.getExpensesByGroupId().subscribe((data: any[]) => {
-        this.expenseList = data;
+      this.auth.getExpensesByGroupId().subscribe((data: any) => {
+       const dataParse = JSON.parse(data);
+        console.log(dataParse)
+        this.expenseList = dataParse['expenses']
     });
   }
 

@@ -1,20 +1,28 @@
-<p-table [value]="expenseList">
-    <ng-template pTemplate="header">
-        <tr>
-            <th>Description</th>
-            <th>Cost</th>
-            <th>Currency</th>
-            <th>Created By</th>
-            <th>Date</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-expense>
-        <tr>
-            <td>{{expense.description}}</td>
-            <td>{{expense.cost}}</td>
-            <td>{{expense.currency_code}}</td>
-            <td>{{expense.created_by.first_name}}</td>
-            <td>{{expense.created_at}}</td>
-        </tr>
-    </ng-template>
-</p-table>
+<p-card>
+    <p-header>
+        Header content here
+    </p-header>
+    <p-table [value]="expenseList">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Description</th>
+                <th>Cost</th>
+                <th>Currency</th>
+                <th>Created By</th>
+                <th>Date</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-expense>
+            <tr>
+                <td>{{expense.description}}</td>
+                <td>{{expense.cost}}</td>
+                <td>{{expense.currency_code}}</td>
+                <td>{{expense.created_by.first_name}}</td>
+                <td>{{expense.created_at}}</td>
+            </tr>
+        </ng-template>
+    </p-table>    
+    <p-footer>
+        Footer content here
+    </p-footer>
+</p-card>
